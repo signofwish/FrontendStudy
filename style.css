@@ -1,10 +1,18 @@
 @charset "utf-8";
-body {
-    font-size: 14px;
+html {
+    font-size: 18px;
+}
+body{
+    font-family: Ubuntu, Arial,'Apple SD Gothic Neo','애플 SD 고딕 Neo','NanumBarunGothic','NanumBarunGothicOTF','나눔바른고딕','나눔바른고딕OTF','Malgun Gothic','맑은 고딕','NanumGothic','NanumGothicOTF', '나눔고딕','나눔고딕OTF',sans-serif;
+    /* for ie7 */
+    *font-family: 'Apple SD Gothic Neo','애플 SD 고딕 Neo','NanumBarunGothic','NanumBarunGothicOTF','나눔바른고딕','나눔바른고딕OTF','Malgun Gothic','맑은 고딕','NanumGothic','NanumGothicOTF', '나눔고딕','나눔고딕OTF',sans-serif;
+    color: rgb(0,0,0);
+    background: #ffffff url('...') no-repeat 0 0;
+
 }
 .logo {
     background-color: red;
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 .logo > img {
     display: block;
@@ -17,12 +25,15 @@ body {
     font-size: 0.7em;
     vertical-align: middle;
 }
+a {
+    text-decoration: underline blink!important;
+}
 
 .search {
     display: inline;
 }
 .search_input {
-    width: 50px;
+    width: 5rem;
 }
 .search_submit {
 }
@@ -34,6 +45,7 @@ body {
     padding: 0.5em 0;
     text-align: center;
     background-color: #ddd;
+    font-variant: small-caps;
 }
 .index-column__title--dark {
     background-color: #000;
@@ -93,4 +105,14 @@ body {
 .main-article > p {
     font-size: 0.9em;
     color: #999;
+}
+.e-content {
+    width: 100rem;
+    margin: 0 auto;
+}
+.e-content:first-letter {
+    font-size: 2em;
+}
+.e-content:first-line {
+    font-weight: bold;
 }

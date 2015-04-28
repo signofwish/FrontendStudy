@@ -17,8 +17,15 @@ body{
 .logo > img {
     display: block;
 }
+.navigation {
+    width: 50%;
+    margin: 0 auto;
+}
+
 .nav li {
     list-style: none;
+    float: left;
+    margin-right: 10px;
 }
 .icon-dropdown:after {
     content: "▼";
@@ -30,14 +37,26 @@ a {
 }
 
 .search {
-    display: inline;
+    float: right;
+    margin-top: -46px;
 }
 .search_input {
     width: 5rem;
 }
-.search_submit {
+.search_input, .search_submit {
+    vertical-align: middle;
 }
-
+.search_input {
+    line-height: 15px;
+}
+.search_submit {
+    height: 21px;
+    padding-top: 0;
+}
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
 .row_one_content {
 
 }
@@ -115,4 +134,9 @@ a {
 }
 .e-content:first-line {
     font-weight: bold;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
 }

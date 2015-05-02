@@ -1,0 +1,66 @@
+.main-nav {
+    margin: 0 0 1em;
+}
+
+.main-nav > li {
+    width: 12em;
+    position: relative;
+}
+.main-nav > li:hover .main-nav__sub{
+    display: block;
+}
+
+.main-nav__a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border: 1px dashed #999999;
+    border-left: none;
+    display: block;
+    padding: 7px 5px 7px 30px;
+    background: #E7E7E7 url(images/link.png) no-repeat left center;
+}
+
+.main-nav__a:hover {
+    background: #B2F511 url(images/go.png) no-repeat 5px 50%;
+    font-weight: bold;
+}
+
+/*noinspection CssOptimizeSimilarProperties*/
+.main-nav__a--home {
+    background-image: url('images/home.png');
+    background-position: 5px 52%;
+}
+
+/*noinspection CssOptimizeSimilarProperties*/
+.main-nav__a--active {
+    background-image: url('images/bg_here.png');
+    background-color: white;
+    background-position: 5px 52%;
+    padding-right: 15px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.main-nav__sub {
+    display: none;
+    position: absolute;
+    padding-left: 0;
+    width: 100%;
+}
+.main-nav__sub > li {
+    display: block;
+    margin-left: 0;
+    border-bottom: 1px dotted #ddd;
+}
+
+.main-nav__sub > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #000;
+}
+.main-nav__sub > li > a:hover {
+    background-color: #ddd;
+}

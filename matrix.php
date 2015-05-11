@@ -27,7 +27,7 @@
         }
 
         /* covers style */
-        .covers > li {
+        .cover {
             width: 23%;
             border: 1px solid #ddd;
         }
@@ -44,9 +44,9 @@
 </head>
 <body>
 <div class="l-wrapper">
-    <ul class="matrix  covers">
+    <ul class="matrix">
         <?php for($i = 0 ; $i < 20 ; $i++){ ?>
-            <li>
+            <li class="cover">
                 <img style="height: <?= rand(100, 300) ?>px" src="http://workerssolidarity.org/wp-content/uploads/2014/04/book-1382078715221-18451-210x300.jpg" alt=""/>
                 <div class="covers__text">
                     <strong>사회민주주의 전통과 <?= $i ?>...</strong>

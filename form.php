@@ -9,59 +9,118 @@
     <link href="ie.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <style type="text/css">
-        #subForm {
+        body {
+            font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+        }
+
+        .col2 .main {
+            /*width: 300px;*/
+        }
+        .sub-form {
             font-size: 0.8em;
         }
-        #subForm .label {
-            float: left;
+        .sub-form__label, .sub-form__empty, .sub-form__input-wrapper {
+            /*float: left;*/
+            /*margin-bottom: 1em;*/
+            display: inline-block;
+        }
+        .sub-form__label, .sub-form__empty {
             clear: left;
-            width: 230px;
-            margin-right: 10px;
+            width: 42.59259259259259%;
+            margin-right: 1.851851851851852%;
             text-align: right;
             font-weight: bold;
         }
-
-        input#subscribe {
-            margin-left: 240px;
-            background-color: #CBD893;
-            font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+        .sub-form__input-wrapper {
+            box-sizing: border-box;
+            width: 55.55555555555556%;
+            padding-top: 2px;
+            margin-bottom: -2px;
         }
-
-        select#refer {
-            font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+        .sub-form__input-wrapper, .sub-form__label {
+            vertical-align: top;
         }
-
-        input#name, input#email, textarea#comments {
-            width: 300px;
+        .sub-form__input-etc {
             background-color: #FBEF99;
-            font-family:"Lucida Console", Monaco, monospace;
             font-size: .9em;
-            margin-top: -2px;
         }
-
-        input#name:focus,
-        input#email:focus,
-        textarea#comments:focus,
-        select#refer:focus
-        {
+        .sub-form__input-etc--long {
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .sub-form input[type=text]:focus,
+        .sub-form input[type=email]:focus,
+        .sub-form textarea:focus,
+        .sub-form select:focus {
             background-color: #FDD041;
         }
 
+        /* btn module */
+        .btn {
+            padding: 0.3em 0.8em;
+            border: none;
+            border-bottom: 2px solid #555;
+            border-right: 2px solid #555;
+            border-radius: 3px;
+            vertical-align: middle;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+        .btn--primary {
+            background-color: #CBD893;
+        }
+        .btn--danger {
+            background-color: darkred;
+            color: white;
+            border-bottom-color: indianred;
+            border-right-color: indianred;
+        }
+        .btn--small {
+            font-size: 0.8em;
+        }
+
+
+        /* helper */
+        .brand-sans-serif {
+            font-family: 'Helvetica', "Gill Sans", "Century Gothic", Arial, sans-serif;
+        }
+        .brand-monospace {
+            font-family:"Courier New", "Lucida Console", Monaco, monospace;
+        }
+        .checkbox-wrapping-label {
+            vertical-align: sub;
+            display: inline-block;
+        }
+
+        /* vertical-align helper */
+        .v-middle {
+            vertical-align: middle;
+        }
+        .v-top {
+            vertical-align: top;
+        }
+        .v-bottom {
+            vertical-align: bottom;
+        }
+        .v-sub {
+            vertical-align: sub;
+        }
     </style>
 </head>
 
-<body id="feature" class="col2">
-<div id="wrapper">
-    <div id="banner">
-        <div id="background"><p class="logo">CosmoFarmer 2.0</p>
-            <div id="nav">
+<body class="col2 feature">
+<div class="wrapper">
+    <div class="banner">
+        <div class="background"><p class="logo">CosmoFarmer 2.0</p>
+            <div class="nav">
                 <ul>
-                    <li><a href="index.html" id="homeLink">Home</a></li>
-                    <li><a href="/features/index.html" id="featureLink">Features</a></li>
-                    <li><a href="/experts/index.html" id="expertLink">Experts</a></li>
-                    <li><a href="/quiz/index.html" id="quizLink">Quiz</a></li>
-                    <li><a href="/projects/index.html" id="projectLink">Projects</a></li>
-                    <li><a href="/horoscopes/index.html" id="horoscopeLink">Horoscopes</a></li></ul>
+                    <li><a href="index.html" class="homeLink">Home</a></li>
+                    <li><a href="/features/index.html" class="featureLink">Features</a></li>
+                    <li><a href="/experts/index.html" class="expertLink">Experts</a></li>
+                    <li><a href="/quiz/index.html" class="quizLink">Quiz</a></li>
+                    <li><a href="/projects/index.html" class="projectLink">Projects</a></li>
+                    <li><a href="/horoscopes/index.html" class="horoscopeLink">Horoscopes</a></li></ul>
                 <br class="clear"  />
             </div>
             <!-- end nav -->
@@ -69,45 +128,64 @@
         <!-- end background -->
     </div>
     <!-- end banner -->
-    <div id="main">
-        <h1 id="lead"><span class="section">Sign Up:</span> Reader Subscription Form </h1>
-        <form id="subForm" name="subForm" method="post" action="">
-            <p><label for="name" class="label">What is your name?</label>
-                <input type="text" name="name" id="name" /></p>
-            <p><label for="email" class="label">What is your email address?</label>
-                <input type="text" name="email" id="email" /></p>
+    <div class="main">
+        <h1 class="lead"><span class="section">Sign Up:</span> Reader Subscription Form </h1>
+        <form class="sub-form" name="subForm" method="post" action="">
             <p>
-                <span class="label">Rate your apartment farming skills </span>
-                <label>
-                    <input name="skill" type="radio" value="novice" />Novice</label>
-                <label>
-                    <input name="skill" type="radio" value="intermediate" />Intermediate</label>
-                <label>
-                    <input name="skill" type="radio" value="advanced" />Advanced</label>
+                <label for="name" class="sub-form__label">What is your name?</label><!--
+                --><span class="sub-form__input-wrapper">
+                    <input type="text" name="name" class="sub-form__input-etc  brand-monospace  sub-form__input-etc--long" />
+                </span>
             </p>
             <p>
-                <label for="refer" class="label">Where did you hear about us? </label>
-                <select name="refer" id="refer">
-                    <option value="null">Select One</option>
-                    <option value="1">Friend</option>
-                    <option value="2">Herban Jungle</option>
-                    <option value="3">Compost Today</option>
-                    <option value="4">Vanity Fair</option>
-                </select>
+                <label for="email" class="sub-form__label">What is your email address?</label><!--
+                --><span class="sub-form__input-wrapper"><input type="text" name="email" class="sub-form__input-etc  brand-monospace  sub-form__input-etc--long" /></span>
             </p>
             <p>
-                <label for="comments" class="label">Any additional comments? </label>
-                <textarea name="comments" rows="4" id="comments"></textarea>
+                <span class="sub-form__label">Rate your apartment farming skills </span><!--
+                --><span class="sub-form__input-wrapper">
+                    <label class="checkbox-wrapping-label">
+                        <input name="skill" type="radio" value="novice" />한글
+                    </label>
+                    <label class="checkbox-wrapping-label">
+                        <input name="skill" type="radio" value="intermediate" />Intermediate
+                    </label>
+
+                    <label class="checkbox-wrapping-label">
+                        <input name="skill" id="skill" type="radio" value="advanced" />camelCase
+                    </label>
+
+                </span>
             </p>
             <p>
-                <input type="submit" name="Submit" id="subscribe" value="Subscribe" />
+                <label for="refer" class="sub-form__label">Where did you hear about us?</label><!--
+                --><span class="sub-form__input-wrapper">
+                    <select name="refer" class="sub-form__input-etc  brand-sans-serif">
+                        <option value="null">Select One</option>
+                        <option value="1">Friend</option>
+                        <option value="2">Herban Jungle</option>
+                        <option value="3">Compost Today</option>
+                        <option value="4">Vanity Fair</option>
+                    </select>
+                </span>
+            </p>
+            <p>
+                <label for="comments" class="sub-form__label">Any additional comments? </label><!--
+                --><span class="sub-form__input-wrapper"><textarea name="comments" rows="4" class="sub-form__input-etc  brand-monospace  sub-form__input-etc--long"></textarea></span>
+            </p>
+            <p>
+                <span class="sub-form__empty"></span><!--
+                --><span class="sub-form__input-wrapper">
+                    <input type="submit" name="Submit" class="btn  btn--primary  brand-sans-serif" value="Subscribe" />
+                    <input type="reset" value="reset" class="btn  btn--danger  btn--small  brand-monospace"/>
+                </span>
             </p>
         </form>
         <br class="clear" />
         <p class="privacy">CosmoFarmer.com believes that your privacy is important. Information collected at this site is limited to our  network of 9,872 partner affiliates. Your information will only be shared among them, and as part of our network's anti-spam policy you will be limited to one e-mail per partner affiliate per day, not to exceed a total of 9,872 e-mails a day. If you wish to opt out of this program please call us between the hours of 9:01-9:03am GMT.</p>
     </div>
     <!-- end main -->
-    <div id="announce">
+    <div class="announce">
         <ul>
             <li><a href="#"><span class="title">Virgo: It's Your Month</span>Lorem ipsum dolor site amet.</a></li>
             <li><a href="#"><span class="title">Your Feedback </span>Lorem ipsum dolor site amet.</a></li>
@@ -120,7 +198,7 @@
         </ul>
     </div>
     <!-- end announce -->
-    <address id="copyright">Copyright 2006, CosmoFarmer.com </address>
+    <address class="copyright">Copyright 2006, CosmoFarmer.com </address>
 </div>
 <!-- end wrapper -->
 </body>

@@ -130,7 +130,7 @@
     <!-- end banner -->
     <div class="main">
         <h1 class="lead"><span class="section">Sign Up:</span> Reader Subscription Form </h1>
-        <form class="sub-form" name="subForm" method="post" action="">
+        <form class="sub-form  js-sub-form" name="subForm" method="post" action="" enctype="multipart/form-data">
             <p>
                 <label for="name" class="sub-form__label">What is your name?</label><!--
                 --><span class="sub-form__input-wrapper">
@@ -139,7 +139,9 @@
             </p>
             <p>
                 <label for="email" class="sub-form__label">What is your email address?</label><!--
-                --><span class="sub-form__input-wrapper"><input type="text" name="email" class="sub-form__input-etc  brand-monospace  sub-form__input-etc--long" /></span>
+                --><span class="sub-form__input-wrapper">
+                    <input type="text" name="email" class="js-number  input-number  sub-form__input-etc  brand-monospace  sub-form__input-etc--long" />
+                </span>
             </p>
             <p>
                 <span class="sub-form__label">Rate your apartment farming skills </span><!--
@@ -201,5 +203,36 @@
     <address class="copyright">Copyright 2006, CosmoFarmer.com </address>
 </div>
 <!-- end wrapper -->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    $('.js-sub-form').submit(function(e){
+        var valid = true;
+
+        e.preventDefault();
+
+        if($.trim(subForm.name.value) == ''){
+            alert('이름을 입력하세요');
+            subForm.name.value.focus();
+            valid = false;
+        }
+
+        if(valid){
+            this.submit();
+        }
+
+    });
+
+    $('.js-number').on('keyup blur', function(e){
+        if(숫자아닌거있는지($(this).val())){
+            $(this).val($(this).val().replace(/[^0-9]/g, ''));
+        }
+    });
+
+
+    function 숫자아닌거있는지(str){
+        return /[^0-9]/.test(str);
+    }
+</script>
+
 </body>
 </html>

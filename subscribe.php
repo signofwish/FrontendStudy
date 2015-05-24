@@ -12,7 +12,7 @@
         label.error {
             color: crimson;
         }
-        input[type=text].error {
+        .typing-field.error {
             background-color: indianred;
             color: white;
         }
@@ -37,27 +37,31 @@
         <label class="error" for="gubun"></label>
     </div>
 
+    <h3>암호</h3>
+    <input type="password" name="pw" id="pw" required=""/>
+    <br/>
+    <input type="password" name="pw2" id="pw2"/>
 
     <h3>*신청인</h3>
 
     <div class="subscription-name long-input">
-        <input id="OrdNm" type="text" name="OrdNm" required="">
+        <input class="typing-field" id="OrdNm" type="text" name="OrdNm" required="">
     </div>
 
 
     <h3>*소속(직장/학교 등) </h3>
 
-    <div class="long-input"><input id="sosok" type="text" name="sosok"></div>
+    <div class="long-input"><input class="typing-field" id="sosok" type="text" name="sosok" required=""></div>
 
 
     <h3>*연락처</h3>
 
-    <div class="long-input"><input id="RcpPhone" type="tel" name="RcpPhone"></div>
+    <div class="long-input"><input class="typing-field" id="RcpPhone" type="tel" name="RcpPhone" required=""></div>
 
 
     <h3>*E-mail</h3>
 
-    <div class="long-input"><input id="UserEmail" type="email" name="UserEmail"></div>
+    <div class="long-input"><input class="typing-field" id="UserEmail" type="email" name="UserEmail" required=""></div>
 
 
     <h3>*국내/해외</h3>
@@ -103,24 +107,25 @@
 
     <div class="short-input address">
         <div id="address-error"></div>
-        <input type="tel" name="zipcode"/>
+        <input class="typing-field" type="tel" name="zipcode" required=""/>
     </div>
 
     <h3>*주소 :</h3>
 
-    <div class="long-input address address-input"><input name="address1" id="address1" size="50" type="text"></div>
-    <div class="long-input address address-input"><input name="address2" id="address2" size="50" type="text"></div>
+    <div class="long-input address address-input"><input class="typing-field" name="address1" id="address1" size="50" type="text" required=""></div>
+    <div class="long-input address address-input"><input class="typing-field" name="address2" id="address2" size="50" type="text" required=""></div>
 
 
     <h3>*구독기간 <sub>(현재 최신 호는 148호, 발행기간 : 2015-05-11
             ~05-24)</sub></h3>
 
     <div class="short-input">
-        <input name="start_hosoo" style="font-size: 1em">호부터
+        <input name="start_hosoo">호부터<label class="error" for="start_hosoo"></label>
     </div>
+
     <div class="radio subscription-period">
         <label>
-            <input name="gigan" value="1년" type="radio" checked="checked">
+            <input name="gigan" value="1년" type="radio">
             1년
         </label>
         <label>
@@ -141,7 +146,7 @@
     </h3>
 
     <div class="short-input">
-        <input id="support" name="support" value="0" type="tel">원을
+        <input class="typing-field" id="support" name="support" value="0" type="number" pattern="[0-9]*">원을
         추가로 후원하겠습니다.
     </div>
 
@@ -164,8 +169,9 @@
                 무통장입금 신청만 가능합니다.
             </sub>
         </p>
+        <label class="error" for="pay_method"></label>
         <label class="platform-dependent" id="pay-method-credit">
-            <input name="pay_method" type="radio" value="onlycard" data-action="/agspay/AGS_pay.php" checked="checked">
+            <input name="pay_method" type="radio" value="onlycard" data-action="/agspay/AGS_pay.php">
             신용카드
         </label>
         <label class="platform-dependent" id="pay-method-hp">
@@ -194,7 +200,7 @@
             <p>신청자와 입금자가 다를 경우 입금인 이름을 기록해 주세요</p>
 
             <div class="long-input subscription-payer">
-                <input name="bank_name" id="bank_name" type="text">
+                <input class="typing-field" name="bank_name" id="bank_name" type="text" required="">
             </div>
             <h3>*무통장 입금하실 은행을 선택해 주세요</h3>
 
@@ -215,16 +221,18 @@
     <h3>남기실 말씀</h3>
 
     <div class="long-input">
-        <textarea id="Remark" name="Remark"></textarea>
+        <textarea class="typing-field" id="Remark" name="Remark"></textarea>
     </div>
 
     <h3>취미(필수 아님. 그러나 선택하면 2개 이상 선택)</h3>
+
 
     <div><label for="hobby_1"><input type="checkbox" name="hobby" id="hobby_1"/> 취미1</label></div>
     <div><label for="hobby_2"><input type="checkbox" name="hobby" id="hobby_2"/> 취미2</label></div>
     <div><label for="hobby_3"><input type="checkbox" name="hobby" id="hobby_3"/> 취미3</label></div>
     <div><label for="hobby_4"><input type="checkbox" name="hobby" id="hobby_4"/> 취미4</label></div>
     <div><label for="hobby_5"><input type="checkbox" name="hobby" id="hobby_5"/> 취미5</label></div>
+    <label class="error" for="hobby"></label>
 
     <div class="submit"><input class="button white" value="신청합니다" type="submit">
     </div>

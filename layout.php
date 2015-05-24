@@ -13,7 +13,8 @@
         }
 
         .wrapper {
-            width: 760px;
+            /*width: 760px;*/
+            width: 40%;
             margin-right: auto;
             margin-left: auto;
             border-right: 2px solid #000000;
@@ -40,7 +41,8 @@
 
 
         .news {
-            float: left;
+            /*float: left;*/
+            display: inline-block;
             width: 160px;
             margin-left: -590px;
         }
@@ -55,9 +57,10 @@
             color: #666666;
         }
 
-        * html #main {
-            width: 430px;
-            w\idth: 419px;
+        * html .main {
+            /*width: 430px;*/
+            /*width: 419px;*/
+            width: 20%;
         }
 
 
@@ -91,7 +94,7 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.</p>
     </div>
 
-    <div id="news">
+    <div class="news">
         <h2>News</h2>
         <a href="#" class="story"><span class="title">Virgo: It's Your Month</span>
             The stars are aligned in your favor. Next month? Not so much. </a>
@@ -101,11 +104,11 @@
             Should you grow grass from scratch or have an expert install a beautiful, already grown, lucious bed of green in your living room? </a>
         <a href="#" class="story"><span class="title">Lorem Ipsum</span>
             Lorem ipsum dolor sit amet </a><a href="#" class="story"><span class="title">Lorem Ipsum</span> Lorem ipsum dolor sit amet </a><a href="#" class="story"><span class="title">Lorem Ipsum</span> Lorem ipsum dolor sit amet </a><a href="#" class="story"><span class="title">Lorem Ipsum</span> Lorem ipsum dolor sit amet </a><a href="#" class="story"><span class="title">Lorem Ipsum</span> Lorem ipsum dolor sit amet </a><a href="#" class="story"><span class="title">Lorem Ipsum</span> Lorem ipsum dolor sit amet </a></div>
-    <div id="nav">
-        <div id="mainNav">
+    <div class="nav">
+        <div class="mainNav">
             <ul>
-                <li><a href="#" id="homeLink">Home</a></li>
-                <li><a href="#" id="featureLink">Features</a></li>
+                <li><a href="#" class="homeLink">Home</a></li>
+                <li><a href="#" class="featureLink">Features</a></li>
                 <li><a href="#">Experts</a></li>
                 <li><a href="#">Quiz</a></li>
                 <li><a href="#">Projects</a></li>
@@ -119,7 +122,7 @@
         </div>
         <p>&nbsp;</p>
     </div>
-    <div id="legal">Copyright 2006, CosmoFarmer.com </div>
+    <div class="legal">Copyright 2006, CosmoFarmer.com </div>
 </div>
 </body>
 </html>

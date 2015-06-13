@@ -91,13 +91,13 @@ a#homeLink {
   <ul class="nav  main-nav">
       <li><a href="#" class="main-nav__a  main-nav__a--home">Home</a></li><?php
       ?><li>
-          <a href="#" class="main-nav__a  main-nav__a--active">Features</a>
-          <ul class="main-nav__sub">
-              <li><a href="#">Feature 1</a></li>
-              <li><a href="#">Feature 2</a></li>
-              <li><a href="#">Feature 3</a></li>
-              <li><a href="#">Feature 4</a></li>
-          </ul>
+		<a href="#" class="main-nav__a  main-nav__a--active">Features</a>          
+		<ul class="main-nav__sub">
+			<li><a href="#">Feature 1</a></li>
+			<li><a href="#">Feature 2</a></li>
+			<li><a href="#">Feature 3</a></li>
+			<li><a href="#">Feature 4</a></li>
+		</ul>
       </li><!--
     --><li><a href="#" class="main-nav__a">Experts</a></li><!--
     --><li><a href="#" class="main-nav__a">Quiz</a></li><!--

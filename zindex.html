@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>z-index example</title>
+	<style type="text/css">
+.first {
+	opacity: 0.99;
+}
+
+.red, .green, .blue {
+  width: 100px;
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
+.red {
+  z-index: 1;
+  top: 20px;
+  left: 20px;
+  background: red;
+}
+
+.green {
+  top: 60px;
+  left: 60px;
+  background: green;
+}
+
+.blue {
+  top: 100px;
+  left: 100px;
+  background: blue;
+}
+	</style>
+</head>
+<body>
+
+<div class=first>
+  <span class="red">Red</span>
+</div>
+<div class=second>
+  <span class="green">Green</span>
+</div>
+<div class=third>
+  <span class="blue">Blue</span>
+</div>
+
+</body>
+</html>

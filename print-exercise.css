@@ -1,0 +1,54 @@
+@media print {
+    body {
+        line-height: 1.8;
+        font-family: serif;
+        font-size: 11pt;
+    }
+
+    body * {
+        color: #000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+        page-break-after: avoid;
+    }
+
+    h1:first-child {
+        margin-top: 0;
+    }
+
+    strong, h1, h2, h3, h4, h5, h6 {
+        font-family: sans-serif;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript"]:after {
+        content: "";
+    }
+
+    .hidden-print {
+        display: none!important;
+    }
+
+    .post-content a {
+        text-decoration: none;
+    }
+
+    .post-content p {
+        text-indent: 1em;
+        margin: 0;
+    }
+
+    .post-content img {
+        display: block;
+        margin: 1em auto;
+        max-width: 80%;
+    }
+
+}
+
